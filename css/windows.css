@@ -1,0 +1,52 @@
+.window {
+  position: absolute;
+  top: 70px;
+  left: 125px;
+  width: min(440px, calc(100vw - 32px));
+  background: #c0c0c0;
+  border: 2px outset #eee;
+  box-shadow: 3px 3px 0 #0005;
+  z-index: 1;
+}
+
+.title-bar {
+  min-height: 30px;
+  padding: 4px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: #000080;
+  cursor: move;
+  user-select: none;
+  touch-action: none;
+}
+
+.title-bar strong {
+  font-size: 13px;
+}
+
+.title-actions {
+  display: flex;
+  gap: 3px;
+}
+
+.title-actions button {
+  width: 22px;
+  height: 21px;
+  padding: 0;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.window-body {
+  padding: 12px;
+}
+
+@media (max-width: 500px) {
+  .window {
+    left: 8px;
+    top: 40px;
+    width: calc(100vw - 16px);
+  }
+}

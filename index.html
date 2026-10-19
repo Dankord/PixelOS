@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelOS</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/windows.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <main class="desktop" id="desktop">
+        <div class="desktop-icons">
+            <button class="desktop-icon" data-open="notes">
+                <span>📝</span>
+                <span>Notepad</span>
+            </button>
+            <button class="desktop-icon" data-open="tasks">
+                <span>📋</span>
+                <span>Task Manager</span>
+            </button>
+        </div>
+
+        <section class="window hidden" id="window-notes" data-app="notes">
+            <header class="title-bar">
+                <strong>📋 Notepad</strong>
+                <div>
+                    <button class="retro-button" data-minimize aria-label="Minimize">_</button>
+                    <button class="retro-button" data-close aria-label="Close">x</button>
+                </div>
+            </header>
+            <div class="window-body">
+                <div class="toolbar">
+                    <button class="retro-button" id="save-note">Save</button>
+                    <button class="retro-button" id="clear-note">Clear</button>
+                </div>
+                <textarea id="note-content" placeholder="Write down your ideas..."></textarea>
+                <p class="status" id="note-status">Ready.</p>
+            </div>
+        </section>
+
+        <section class="window hidden" id="window-tasks" data-app="tasks">
+            <header class="title-bar">
+                <strong>📋 Task Manager</strong>
+                <div>
+                    <button class="retro-button" data-minimize aria-label="Minimize">_</button>
+                    <button class="retro-button" data-close aria-label="Close">x</button>
+                </div>
+            </header>
+            <div class="window-body">
+                <form class="toolbar" id="task-form">
+                    <input
+                        id="task-input"
+                        maxlength="120"
+                        placeholder="What needs to be done?"
+                        required
+                    >
+                    <button class="retro-button" type="submit">Add</button>
+                </form>
+                <p class="task-summary" id="task-summary">0 tasks remaining</p>
+                <ul id="task-list" class="task-list"></ul>
+            </div>
+        </section>
+    </main>
+    <div class="start-menu hidden" id="start-menu">
+        <div class="menu-heading">PIXEL OS</div>
+        <button data-open="notes">📝 Notes</button>
+        <button data-open="tasks">📋 Task Manager</button>
+    </div>
+    <footer class="taskbar">
+        <button class="retro-button start-button" id="start-button">🪟 Start</button>
+        <div class="taskbar-apps" id="taskbar-apps"></div>
+        <div class="clock" id="clock">--:--</div>
+    </footer>
+</body>
+</html>

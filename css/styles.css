@@ -1,0 +1,38 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 13px;
+  overflow: hidden;
+  background: #008080;
+  color: #111;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.retro-button {
+  padding: 5px 10px;
+  background: #c0c0c0;
+  border: 2px outset #fff;
+  color: #111;
+}
+
+.retro-button:active {
+  border-style: inset;
+}

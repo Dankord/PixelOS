@@ -1,0 +1,56 @@
+
+.window-body input,
+.window-body textarea {
+  width: 100%;
+  padding: 8px;
+  background: white;
+  border: 2px inset #eee;
+}
+
+.window-body textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.status {
+  margin-top: 8px;
+  color: #444;
+  font-size: 11px;
+}
+
+.task-list {
+  max-height: 220px;
+  margin: 12px 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px;
+  border-bottom: 1px solid #aaa;
+  overflow-wrap: anywhere;
+}
+
+.task-item span {
+  flex: 1;
+}
+
+.task-item.completed span {
+  color: #666;
+  text-decoration: line-through;
+}
+
+.task-item button {
+  flex-shrink: 0;
+}

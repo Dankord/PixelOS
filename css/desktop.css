@@ -1,0 +1,127 @@
+
+.desktop {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  padding: 16px 16px 54px;
+  overflow: hidden;
+  background: #008080;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.desktop-icon {
+  width: 85px;
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: white;
+  text-shadow: 1px 1px #222;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.desktop-icon:hover {
+  background: #ffffff25;
+  border: 1px dotted white;
+}
+
+.desktop-icon .emoji {
+  font-size: 30px;
+  text-shadow: none;
+}
+
+.taskbar {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 44px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #c0c0c0;
+  border-top: 2px solid white;
+}
+
+.start-button {
+  height: 32px;
+  font-weight: bold;
+}
+
+.taskbar-apps {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  gap: 4px;
+  overflow-x: auto;
+}
+
+.taskbar-app {
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.taskbar-app.active {
+  border-style: inset;
+}
+
+.clock {
+  padding: 7px;
+  white-space: nowrap;
+  border: 2px inset #eee;
+}
+
+.start-menu {
+  position: fixed;
+  z-index: 1001;
+  left: 4px;
+  bottom: 44px;
+  width: 210px;
+  padding: 6px;
+  background: #c0c0c0;
+  border: 2px outset #eee;
+  box-shadow: 2px 2px #0005;
+}
+
+.menu-heading {
+  padding: 8px;
+  color: white;
+  background: #000080;
+  font-weight: bold;
+}
+
+.start-menu button {
+  width: 100%;
+  padding: 12px 8px;
+  text-align: left;
+  border: none;
+  background: transparent;
+}
+
+.start-menu button:hover {
+  color: white;
+  background: #000080;
+}
+
+@media (max-width: 500px) {
+  .clock {
+    font-size: 11px;
+  }
+
+  .taskbar-app {
+    max-width: 90px;
+  }
+}
